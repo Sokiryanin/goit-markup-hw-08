@@ -28,12 +28,10 @@
     <!--Header-->
     <header class="header">
       <div class="line-header">
-      <div class="container main-nav">
-
-        <a href="" class="logo--black link animate__animated animate__heartBeat">
+        <div class="container main-nav">
+          <a href="" class="logo--black link animate__animated animate__heartBeat">
             <span class="logo">Web</span>Studio</a>
-
-        <nav class="nav">
+          <nav class="nav">
           <ul class="nav__list list">
             <li class="nav__item">
               <a href="" class="nav__link current link">Студия</a>
@@ -45,8 +43,8 @@
               <a href="" class="nav__link link">Контакты</a>
             </li>
           </ul>
-        </nav>
-        <ul class="contacts list">
+          </nav>
+          <ul class="contacts list">
           <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link link"
               >
@@ -62,12 +60,64 @@
               <svg class="contacts__icon" width="10" height="16">
                         <use href="./images/icons.svg#icon-smartphone"></use>
                       </svg>
-              +380961111111</a
-            >
+              +380961111111</a>
           </li>
-        </ul
+          </ul>
+          
+          <!-- mob-menu -->
+          <button type="button" class="menu-open-btn">
+            <svg class="icon-open-menu"
+            width="40" 
+            height="40">
+            <use href="./images/icons.svg#icon-menu" ></use>
+            </svg>
+          </button>
+          <div class="mob-menu is-hidden">
+            <div class="container">
+              <div class="mob-menu-top">
+                <button type="button" class="menu-close-btn">
+            <svg class="icon-close-menu"
+            width="40" 
+            height="40">
+            <use href="./images/icons.svg#icon-cross" ></use>
+            </svg>
+          </button>
+          <ul class="mob-menu__list list">
+            <li class="mob-menu__item">
+              <a href="" class="mob-menu__link mob-current link">Студия</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="./portfolio.html" class="mob-menu__link link">Портфолио</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="" class="mob-menu__link link">Контакты</a>
+            </li>
+          </ul>
+              </div>
+
+          <div class="mob-menu-bottom">
+          <ul class="mob-menu__contacts list">
+          <li class="mob-menu__contacts__item">
+            <a href="tel:+38 096 111 11 11" class="mob-menu__contacts__link tel link"
+              > +38 096 111 11 11</a>
+          </li>
+          <li class="mob-menu__contacts__item">
+            <a href="mailto:info@devstudio.com" class="mob-menu__contacts__link link"
+              >info@devstudio.com</a>
+          </li>
+        </ul>
+      <ul class="mob__soc-list list">
+      <li class="mob__soc-item"><a href="" class="mob__soc-link link">Twitter</a></li>
+      <li class="mob__soc-item"><a href="" class="mob__soc-link link">Instagram</a></li>
+      <li class="mob__soc-item"><a href="" class="mob__soc-link link">Facebook</a></li>
+      <li class="mob__soc-item"><a href="" class="mob__soc-link link">LinkedIn</a></li>
+      </ul>
+          </div>
+    </div>
+          </div>
         </div> 
-        </div>
+      </div>
+          
     </header>
     <main>
       <!--Hero-->
@@ -613,10 +663,12 @@
               class="modal-field__check visually-hidden"
             />
             <label for="policy" class="modal-field__check-text"
-              >Соглашаюсь с рассылкой и принимаю
+              ><span>
+              Соглашаюсь с рассылкой и принимаю
               <a href="" class="modal-field__check-text-link"
                 >Условия договора</a
-              ></label
+              >
+            </span></label
             >
           </div>
           <button type="submit" class="modal-btn button">Отправить</button>
@@ -624,5 +676,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

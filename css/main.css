@@ -158,8 +158,10 @@ body {
 }
 
 .modal {
-  width: 450px;
-  height: 609px;
+  max-width: 450px;
+  max-height: 609px;
+  width: 100%;
+  height: 100%;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -172,6 +174,12 @@ body {
 }
 .backdrop.is-hidden .modal {
   transform: scale(0);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    max-height: 581px;
+  }
 }
 
 .modal__close-btn {
@@ -283,13 +291,22 @@ body {
 .modal-field__check-text {
   display: flex;
   font-family: "Roboto";
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .modal-field__check-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 .modal-field__check-text::before {
   content: " ";
@@ -312,11 +329,15 @@ body {
 
 .modal-field__check-text-link {
   font-family: "Roboto";
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--accent-color);
   margin-left: 4px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
 .modal-btn {
@@ -344,8 +365,11 @@ body {
 }
 
 .main-nav {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .main-nav {
@@ -440,17 +464,30 @@ body {
   .contacts {
     display: block;
     margin-left: auto;
+    padding-top: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
   .contacts {
     display: flex;
+    padding-top: 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .contacts__item + .contacts__item {
     margin-left: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__item {
+    margin-bottom: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__item {
+    margin-bottom: 0;
   }
 }
 
@@ -479,6 +516,134 @@ body {
 .contacts__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.menu-open-btn,
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-open-btn:hover, .menu-open-btn:focus {
+  color: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .menu-open-btn {
+    display: none;
+  }
+}
+
+.menu-close-btn {
+  margin-top: 10px;
+}
+.menu-close-btn:hover, .menu-close-btn:focus {
+  color: var(--accent-color);
+}
+
+.icon-open-menu,
+.icon-close-menu {
+  fill: currentColor;
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+}
+.mob-menu .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.mob-container {
+  padding: 40px 48px;
+}
+
+.mob-menu__list {
+  margin-left: 25px;
+  margin-bottom: 40px;
+}
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu__link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+
+.mob-current {
+  color: var(--accent-color);
+}
+
+.mob-menu__contacts {
+  margin-left: 25px;
+  margin-bottom: 64px;
+}
+
+.mob-menu__contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu__contacts__link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.tel {
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+.mob__soc-list {
+  display: flex;
+  margin-left: 25px;
+  padding-bottom: 48px;
+}
+
+.mob__soc-item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
+}
+
+.mob__soc-item:not(:first-child) {
+  margin-left: 10px;
+}
+
+.mob__soc-link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2222222222;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #2196f3;
 }
 
 .hero {
