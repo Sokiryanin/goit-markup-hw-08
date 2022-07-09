@@ -67,7 +67,7 @@
     transform: translateY(0);
   }
   @include mobile {
-    min-width: 450px;
+    width: 450px;
     height: 294px;
   }
 
@@ -91,7 +91,7 @@
 .projects-set__bottom-wrap__title {
   color: var(--primary-color-text);
   font-family: "Roboto";
-  @include font(18px, 700, 1.2, 0.06em);
+  @include font(18px, 700, 2, 0.06em);
 }
 
 .projects-set__bottom-wrap__type {

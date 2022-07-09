@@ -9,13 +9,14 @@
 }
 .skills__list {
   display: flex;
+  padding-bottom: 94px;
 }
 
 .skills__item {
   position: relative;
+  text-align: center;
   &:not(:last-child) {
     margin-right: 30px;
-    text-align: center;
   }
 }
 
